@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_other_info"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_view_user_head_picture"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="8dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+            <View
+                android:id="@+id/view_divide_line1"
+                android:layout_width="wrap_content"
+                android:layout_height="4dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/text_view_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/view_divide_line1"
+                android:layout_toRightOf="@id/image_view_user_head_picture"
+                android:text="白白白白白白菜"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="14dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/view_divide_line1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp">
+
+                <TextView
+                    android:id="@+id/text_view_read_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="2.3w"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="10dp"/>
+
+                <TextView
+                    android:id="@+id/text_view_comment_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="238"
+                    android:textColor="@color/colorSecondaryText"
+                    android:textSize="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_view_post_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_divide_line1"
+                android:layout_toRightOf="@id/image_view_user_head_picture"
+                android:text="2017-4-23"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="12dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_layout_other_info">
+
+            <TextView
+                android:id="@+id/text_view_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:textSize="12dp"
+                android:text="【寻找队伍】"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_view_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:textSize="12dp"
+                android:text="软通动力"
+                android:textColor="@color/colorSection"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/l"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:text="标题"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_post_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_post_title"
+            >
+
+            <ImageView
+                android:id="@+id/image_view_item_image0"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/image_view_item_image1"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/image_view_item_image2"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

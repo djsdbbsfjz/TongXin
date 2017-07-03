@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="20dp">
+
+    <TextView
+        android:id="@+id/text_view_username_of_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="username"/>
+
+    <TextView
+        android:id="@+id/text_view_content_of_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="reply"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/text_view_time_of_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="10dp"
+        android:text="time"/>
+</LinearLayout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:clipChildren="false"
+                app:layout_collapseMode="parallax"
+                android:background="@color/colorTextOrIcons">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_gravity="center">
+                </android.support.v4.view.ViewPager>
+            </FrameLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/forum_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <Spinner
+            android:id="@+id/spinner_section"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:spinnerMode="dialog">
+        </Spinner>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout_forum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDivider"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/posts_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/view_forum_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_fab_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#bbffffff"
+        android:visibility="gone"/>
+
+    <com.ddz.floatingactionbutton.FloatingActionMenu
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="5dp"
+        app:fab_addButtonColorNormal="@color/colorPrimaryDark"
+        app:fab_addButtonColorPressed="@color/colorLightPrimary"
+        app:fab_addButton_collapsed_rotation="0"
+        app:fab_addButton_expanded_rotation="45"
+        app:fab_addButton_rotation_duration="800"
+        app:fab_labelStyle="@style/lable_style"
+        app:fab_labelsPosition="left">
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_only_show_find_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorLightPrimary"
+            app:fab_icon="@drawable/ic_only_find_team"
+            app:fab_size="mini"
+            app:fab_title="@string/only_find_team"/>
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_only_show_find_teammate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorLightPrimary"
+            app:fab_icon="@drawable/ic_only_find_teammate"
+            app:fab_size="mini"
+            app:fab_title="@string/only_find_teammate"/>
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_find_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorLightPrimary"
+            app:fab_icon="@drawable/ic_find_team_white_24dp"
+            app:fab_size="mini"
+            app:fab_title="@string/find_team"/>
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_find_teammate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_colorPressed="@color/colorLightPrimary"
+            app:fab_icon="@drawable/ic_find_teammate_white_24dp"
+            app:fab_size="mini"
+            app:fab_title="@string/find_teammate"/>
+    </com.ddz.floatingactionbutton.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>
