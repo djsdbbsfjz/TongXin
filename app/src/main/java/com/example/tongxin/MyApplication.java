@@ -55,5 +55,4 @@ public class MyApplication extends Application{
         return ActivityManagerUtils.getInstance().getTopActivity();
     }
 
-    //test update
 }
